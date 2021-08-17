@@ -1,4 +1,8 @@
 - Unix
 - Bash
 - Git
+- HTML
+- CSS
 - HTML Semântico
+
+
