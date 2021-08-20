@@ -1,0 +1,28 @@
+h1,
+p {
+  text-align: center;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+ol a {
+  text-decoration: none;
+  transition: 0.3s ease-in-out color;
+}
+
+ol a:hover {
+  color: #ffffff;
+}
+
+ol li {
+  transition: 0.3s ease-in-out background-color;
+}
+ol li:hover {
+  background-color: #663399d3;
+}
+
+ol li:active {
+  font-family: Arial, Helvetica, sans-serif;
+}
