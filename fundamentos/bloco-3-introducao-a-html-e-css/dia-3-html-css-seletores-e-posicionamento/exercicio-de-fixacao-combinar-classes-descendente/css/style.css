@@ -1,0 +1,73 @@
+ol {
+  background-color: #ffff00;
+}
+
+ol li:nth-child(2n) {
+  color: green;
+}
+
+ol li:nth-child(2n + 1) {
+  text-transform: uppercase;
+}
+
+ul,
+ol {
+  width: 500px;
+  line-height: 30px;
+}
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: 700;
+}
+
+.title {
+  color: #ff0000;
+}
+
+.title em {
+  font-size: 40px;
+  border: 1px solid #000;
+}
+
+.list-lang li {
+  margin-bottom: 5px;
+}
+
+.list-lang li:nth-child(n + 2):nth-child(-n + 4) {
+  color: blue;
+}
+
+.list-lang li:nth-child(n + 2):nth-child(-n + 3) {
+  background-color: violet;
+}
+
+.allies li {
+  transition: 0.3s font-weight ease;
+}
+
+.allies li:hover {
+  font-weight: bold;
+}
+
+.allies li:nth-of-type(1) a:hover {
+  color: #ff4500;
+}
+
+.allies li:nth-of-type(2) a:hover {
+  color: #04aa6d;
+}
+
+.allies li:nth-of-type(3) a:hover {
+  color: #1b1b1b;
+}
+
+.allies li:nth-of-type(4) a:hover {
+  color: rgb(224, 224, 4);
+}
+
+.allies li:nth-of-type(5) a:hover {
+  color: #2fc18c;
+}
