@@ -1,0 +1,52 @@
+h1 {
+  text-align: center;
+}
+
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+}
+
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+}
+
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+}
+
+#podium {
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+#podium ul li:nth-of-type(2) {
+  display: inline-block;
+}
+
+#podium ul li:nth-of-type(3) {
+  display: inline-block;
+}
+
+#podium li {
+  list-style: none;
+}
+
+#podium-award {
+  text-align: center;
+}
+
+#podium-award li {
+  display: inline-block;
+}
