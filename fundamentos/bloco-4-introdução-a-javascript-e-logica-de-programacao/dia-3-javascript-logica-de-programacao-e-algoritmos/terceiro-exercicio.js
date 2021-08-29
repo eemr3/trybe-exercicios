@@ -1,10 +1,15 @@
 const n = 5;
+let positionSymbol = n;
 
-for (let index = 1; index <= n; index += 1) {
-  let asterisk = "*";
-  for (let secondIndex = 5; secondIndex > index; secondIndex -= 1) {
-    space = " ";
-    asterisk = space + asterisk;
+for (let index = 0; index < n; index += 1) {
+  let symbol = "";
+  for (let sencondIndex = 0; sencondIndex <= n; sencondIndex += 1) {
+    if (sencondIndex < positionSymbol) {
+      symbol += " ";
+    } else {
+      symbol += "*";
+    }
   }
-  console.log(asterisk);
+  console.log(symbol);
+  positionSymbol -= 1;
 }
