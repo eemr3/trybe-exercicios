@@ -25,6 +25,7 @@ let infoTwo = {
 };
 
 infoTwo["recorrente"] = "Sim";
+
 let result = {};
 
 for (key in info) {
