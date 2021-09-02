@@ -86,6 +86,14 @@
         document.getElementsByTagName("p")[0].style =
           "text-transform: uppercase;";
       }
+
+      /* 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console. */
+      function exibirTodasAsTagsP() {
+        const tagP = document.getElementsByTagName("p");
+        for (tag of tagP) {
+          console.log(tag);
+        }
+      }
     </script>
   </body>
 </html>
