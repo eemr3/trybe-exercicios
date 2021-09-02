@@ -38,7 +38,7 @@
     <main class="main-content">
       <section class="center-content">
         <p>Texto padrão do nosso site</p>
-        <p>-----</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>Trybe</p>
       </section>
     </main>
@@ -83,8 +83,10 @@
 
       /* 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo. */
       function textoEmMaiusculo() {
-        document.getElementsByTagName("p")[0].style =
-          "text-transform: uppercase;";
+        const tagP = document.getElementsByTagName("p");
+        for (item of tagP) {
+          item.style.textTransform = "uppercase";
+        }
       }
 
       /* 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console. */
