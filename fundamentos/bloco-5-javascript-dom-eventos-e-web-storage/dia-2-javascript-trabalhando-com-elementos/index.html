@@ -95,6 +95,31 @@
       imageSamll.className = "small-image";
       imageSamll.setAttribute("src", "https://picsum.photos/200");
       tagSectionLeft.appendChild(imageSamll);
+
+      /* 8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6 */
+      const numberInFull = [
+        "um",
+        "dos",
+        "três",
+        "quatro",
+        "cinso",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+
+      const listNumber = document.createElement("ol");
+      tagSectionRight.appendChild(listNumber);
+
+      for (let index = 0; index < numberInFull.length; index += 1) {
+        const itens = numberInFull[index];
+        const listItens = document.createElement("li");
+        listItens.innerText = itens;
+
+        listNumber.appendChild(listItens);
+      }
     </script>
   </body>
 </html>
