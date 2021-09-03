@@ -123,6 +123,10 @@
 
         listNumber.appendChild(listItens);
       }
+
+      listNumber.lastElementChild.previousElementSibling.remove();
+      listNumber.lastElementChild.remove();
+
       /* Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2 */
       const tagH3One = document.createElement("h3");
       const tagH3Two = document.createElement("h3");
