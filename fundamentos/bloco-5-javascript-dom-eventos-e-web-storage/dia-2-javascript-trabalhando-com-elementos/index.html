@@ -79,6 +79,11 @@
       tagP.innerText =
         "E não vos conformeis com este século, mas transformai-vos pela renovação da vossa mente. Rm 12:2a";
       tagSection.appendChild(tagP);
+
+      /* 5- Adicione a tag section com a classe left-content como filho da tag main criada no passo 2 */
+      const tagSectionLeft = document.createElement("section");
+      tagSectionLeft.className = "left-content";
+      tagMain.appendChild(tagSectionLeft);
     </script>
   </body>
 </html>
