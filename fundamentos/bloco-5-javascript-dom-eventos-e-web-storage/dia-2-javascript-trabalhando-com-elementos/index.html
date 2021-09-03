@@ -85,7 +85,7 @@
       const tagSectionLeft = document.createElement("section");
       tagSectionLeft.className = "left-content";
       tagMain.appendChild(tagSectionLeft);
-
+      tagMain.removeChild(tagSectionLeft);
       /* 6- Adicione a tag section com a classe right-content como filho da tag main criada no passo 2 */
       const tagSectionRight = document.createElement("section");
       tagSectionRight.className = "right-content";
