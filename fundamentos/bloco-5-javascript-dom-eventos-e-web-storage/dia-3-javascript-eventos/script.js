@@ -61,3 +61,6 @@ function createHoliday(feriados) {
   divContainer.appendChild(btnHoliday);
 }
 createHoliday("Feriados");
+
+const btnHolidayToggle = document.querySelector("#btn-holiday");
+btnHolidayToggle.addEventListener("click", changeColorHoliday);
