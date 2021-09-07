@@ -99,3 +99,6 @@ function changeTextFriday() {
     }
   }
 }
+
+const btnFridayToggle = document.querySelector("#btn-friday");
+btnFridayToggle.addEventListener("click", changeTextFriday);
