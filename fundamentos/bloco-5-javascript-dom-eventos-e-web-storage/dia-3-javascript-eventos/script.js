@@ -102,3 +102,15 @@ function changeTextFriday() {
 
 const btnFridayToggle = document.querySelector("#btn-friday");
 btnFridayToggle.addEventListener("click", changeTextFriday);
+
+function zoomInDays() {
+  const days = document.getElementsByClassName("day");
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener("mouseover", (event) => {
+      // days[index].style.fontSize = "30px";
+      event.target.style.fontSize = "30px";
+      event.target.style.fontWeight = "600";
+    });
+  }
+}
+zoomInDays();
