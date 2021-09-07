@@ -114,3 +114,23 @@ function zoomInDays() {
   }
 }
 zoomInDays();
+
+function zoomOutDays() {
+  const days = document.getElementsByClassName("day");
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener("mouseout", () => {
+      event.target.style.fontSize = "20px";
+      event.target.style.fontWeight = "400";
+    });
+  }
+}
+
+zoomOutDays();
+
+function newTask(task) {
+  const divTask = document.querySelector(".my-tasks");
+  const spanTask = document.createElement("span");
+
+  spanTask.innerText = task;
+  divTask.appendChild(spanTask);
+}
