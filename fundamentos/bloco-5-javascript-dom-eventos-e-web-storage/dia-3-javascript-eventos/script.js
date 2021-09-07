@@ -51,3 +51,13 @@ function createDaysOfMonth() {
   }
 }
 createDaysOfMonth();
+
+function createHoliday(feriados) {
+  const btnHoliday = document.createElement("button");
+  const divContainer = document.querySelector(".buttons-container");
+
+  btnHoliday.id = "btn-holiday";
+  btnHoliday.innerText = feriados;
+  divContainer.appendChild(btnHoliday);
+}
+createHoliday("Feriados");
