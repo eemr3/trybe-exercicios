@@ -85,3 +85,17 @@ function createFridayBtn(friday) {
 }
 
 createFridayBtn("Sexta-Feira");
+
+function changeTextFriday() {
+  const fridayText = document.getElementsByClassName("friday");
+  let fridayDay = "SEXTOU!";
+  let daysList = [4, 11, 18, 25];
+
+  for (let index = 0; index < fridayText.length; index += 1) {
+    if (fridayText[index].innerText !== fridayDay) {
+      fridayText[index].innerHTML = fridayDay;
+    } else {
+      fridayText[index].innerHTML = daysList[index];
+    }
+  }
+}
