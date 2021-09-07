@@ -131,6 +131,8 @@ function newTask(task) {
   const divTask = document.querySelector(".my-tasks");
   const spanTask = document.createElement("span");
 
-  spanTask.innerText = task;
+  spanTask.innerHTML = task;
   divTask.appendChild(spanTask);
 }
+
+newTask("Projeto");
