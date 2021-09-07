@@ -64,3 +64,14 @@ createHoliday("Feriados");
 
 const btnHolidayToggle = document.querySelector("#btn-holiday");
 btnHolidayToggle.addEventListener("click", changeColorHoliday);
+
+function changeColorHoliday() {
+  const holidyBg = document.getElementsByClassName("holiday");
+  for (element of holidyBg) {
+    if (element.style.backgroundColor === "rgb(222, 226, 255)") {
+      element.style.backgroundColor = "";
+    } else {
+      element.style.backgroundColor = "rgb(222, 226, 255)";
+    }
+  }
+}
