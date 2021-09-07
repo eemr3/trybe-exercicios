@@ -75,3 +75,13 @@ function changeColorHoliday() {
     }
   }
 }
+
+function createFridayBtn(friday) {
+  const btnFriday = document.createElement("button");
+  const divContainer = document.querySelector(".buttons-container");
+  btnFriday.id = "btn-friday";
+  btnFriday.innerText = friday;
+  divContainer.appendChild(btnFriday);
+}
+
+createFridayBtn("Sexta-Feira");
