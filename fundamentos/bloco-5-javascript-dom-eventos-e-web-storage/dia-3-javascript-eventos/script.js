@@ -136,3 +136,12 @@ function newTask(task) {
 }
 
 newTask("Projeto");
+
+function colorSubtitle(color) {
+  const divTask = document.querySelector(".my-tasks");
+  const divColor = document.createElement("div");
+  divColor.className = "task";
+  divColor.style.backgroundColor = color;
+
+  divTask.appendChild(divColor);
+}
