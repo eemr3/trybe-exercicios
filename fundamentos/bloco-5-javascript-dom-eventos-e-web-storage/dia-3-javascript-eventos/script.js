@@ -193,3 +193,29 @@ changeColorDaySelected();
 // }
 
 // setColorTaskDays();
+
+function addCompromise() {
+  const btnAddCompromise = document.querySelector("#btn-add");
+  const inputCompromise = document.querySelector("#task-input");
+  const compromiseList = document.querySelector(".task-list");
+
+  btnAddCompromise.addEventListener("click", () => {
+    let compromiseValue = inputCompromise.value;
+    const list = document.createElement("li");
+    if (inputCompromise.value === "") {
+      alert("Error: Não é possível adicionar um compromisso vazio!");
+    }
+    list.innerHTML = compromiseValue;
+    compromiseList.appendChild(list);
+    inputCompromise.value = "";
+  });
+  inputCompromise.addEventListener("keyup", (event) => {
+    if (event.keyCode === 13 && inputCompromise.value.length > 0) {
+      const list = document.createElement("li");
+      list.innerText = inputCompromise.value;
+      compromiseList.appendChild(list);
+      inputCompromise.value = "";
+    }
+  });
+}
+addCompromise();
