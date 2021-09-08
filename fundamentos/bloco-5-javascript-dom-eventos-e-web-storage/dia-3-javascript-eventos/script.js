@@ -145,3 +145,16 @@ function colorSubtitle(color) {
 
   divTask.appendChild(divColor);
 }
+colorSubtitle("green");
+
+function selectedTask() {
+  const divSelected = document.querySelector(".task");
+  divSelected.addEventListener("click", (event) => {
+    if (divSelected.className === "task selected") {
+      divSelected.classList.remove("selected");
+    } else {
+      event.target.className = "task selected";
+    }
+  });
+}
+selectedTask();
