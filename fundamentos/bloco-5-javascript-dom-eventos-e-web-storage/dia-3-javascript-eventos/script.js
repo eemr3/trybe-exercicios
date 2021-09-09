@@ -87,27 +87,32 @@ function createFridayBtn(friday) {
 createFridayBtn("Sexta-Feira");
 
 function changeTextFriday() {
+  const btnFridayToggle = document.querySelector("#btn-friday");
   const fridayText = document.getElementsByClassName("friday");
+
   let fridayDay = "SEXTOU!";
-  let daysList = [4, 11, 18, 25];
+  const arrayFriday = [];
 
   for (let index = 0; index < fridayText.length; index += 1) {
-    if (fridayText[index].innerText !== fridayDay) {
-      fridayText[index].innerHTML = fridayDay;
-    } else {
-      fridayText[index].innerHTML = daysList[index];
-    }
+    arrayFriday.push(fridayText[index].innerHTML);
   }
-}
 
-const btnFridayToggle = document.querySelector("#btn-friday");
-btnFridayToggle.addEventListener("click", changeTextFriday);
+  btnFridayToggle.addEventListener("click", () => {
+    for (let index = 0; index < fridayText.length; index += 1) {
+      if (fridayText[index].innerText !== fridayDay) {
+        fridayText[index].innerHTML = fridayDay;
+      } else {
+        fridayText[index].innerHTML = arrayFriday[index];
+      }
+    }
+  });
+}
+changeTextFriday();
 
 function zoomInDays() {
   const days = document.getElementsByClassName("day");
   for (let index = 0; index < days.length; index += 1) {
     days[index].addEventListener("mouseover", (event) => {
-      // days[index].style.fontSize = "30px";
       event.target.style.fontSize = "30px";
       event.target.style.fontWeight = "600";
     });
