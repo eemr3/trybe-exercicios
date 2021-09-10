@@ -80,3 +80,24 @@ function familyFontStorage() {
   return getFamiluFont;
 }
 familyFontStorage();
+
+function spaceLine() {
+  const spaceLine = document.querySelector("#space-line");
+  spaceLine.addEventListener("input", function () {
+    webStorageValues.setSpaceLineStorage("space", spaceLine.value);
+    spaceLineStorage();
+  });
+  spaceLine.value = spaceLineStorage();
+}
+spaceLine();
+
+function spaceLineStorage() {
+  const getValeuSpace = localStorage.getItem("space");
+  const paragraph = document.querySelectorAll("p");
+
+  for (let index = 0; index < paragraph.length; index += 1) {
+    paragraph[index].style.lineHeight = `${getValeuSpace}px`;
+  }
+  return getValeuSpace;
+}
+spaceLineStorage();
