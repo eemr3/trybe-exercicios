@@ -41,3 +41,22 @@ function setSizeFontStorage() {
   return sizeFont;
 }
 setSizeFontStorage();
+
+function bgColorPage() {
+  const bgColor = document.querySelector("#color-back");
+  bgColor.addEventListener("input", function (event) {
+    webStorageValues.setBgColorStorage("bgColor", event.target.value);
+    bgColorStorage();
+  });
+  let valueBgColor = bgColorStorage();
+  bgColor.value = valueBgColor;
+}
+bgColorPage();
+
+function bgColorStorage() {
+  const getBgStorage = localStorage.getItem("bgColor");
+  const mainElement = document.querySelector("main");
+  mainElement.style.backgroundColor = getBgStorage;
+  return getBgStorage;
+}
+bgColorStorage();
