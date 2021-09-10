@@ -171,33 +171,18 @@ function changeColorDaySelected() {
 
   for (let index = 0; index < days.length; index += 1) {
     days[index].addEventListener("click", () => {
-      if (days[index].style.color === "green") {
-        days[index].style.color = "rgb(119,119,119)";
-      } else {
-        days[index].style.color = "green";
+      if (elemetDiv.classList.contains("selected")) {
+        if (days[index].style.color === getColor) {
+          days[index].style.color = "rgb(119,119,119)";
+        } else {
+          days[index].style.color = getColor;
+        }
       }
     });
   }
 }
 
 changeColorDaySelected();
-
-// function setColorTaskDays() {
-//   let days = document.querySelector("#days");
-//   days.addEventListener("click", function (event) {
-//     let colorSelected = document.getElementsByClassName("task selected");
-//     if (
-//       colorSelected.length > 0 &&
-//       colorSelected[0].style.backgroundColor !== event.target.style.color
-//     ) {
-//       event.target.style.color = colorSelected[0].style.backgroundColor;
-//     } else {
-//       event.target.style.color = "rgb(119,119,119)";
-//     }
-//   });
-// }
-
-// setColorTaskDays();
 
 function addCompromise() {
   const btnAddCompromise = document.querySelector("#btn-add");
