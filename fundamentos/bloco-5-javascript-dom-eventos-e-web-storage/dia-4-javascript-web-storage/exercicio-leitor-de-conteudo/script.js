@@ -60,3 +60,23 @@ function bgColorStorage() {
   return getBgStorage;
 }
 bgColorStorage();
+
+function familyFont() {
+  const familyFont = document.querySelector("#font-type");
+  familyFont.addEventListener("input", function (event) {
+    webStorageValues.setFontFamilyStorage("family", familyFont.value);
+    familyFontStorage();
+  });
+  familyFont.value = familyFontStorage();
+}
+familyFont();
+
+function familyFontStorage() {
+  const getFamiluFont = localStorage.getItem("family");
+  const paragraph = document.querySelectorAll("p");
+  for (let index = 0; index < paragraph.length; index += 1) {
+    paragraph[index].style.fontFamily = getFamiluFont;
+  }
+  return getFamiluFont;
+}
+familyFontStorage();
