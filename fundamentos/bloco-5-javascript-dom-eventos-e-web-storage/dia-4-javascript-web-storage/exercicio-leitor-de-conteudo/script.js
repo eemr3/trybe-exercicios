@@ -101,3 +101,21 @@ function spaceLineStorage() {
   return getValeuSpace;
 }
 spaceLineStorage();
+
+const webStorageValues = {
+  setColorStorage: function (color, colorValue) {
+    localStorage.setItem(color, colorValue);
+  },
+  setSizeFontStorage: function (size, value) {
+    localStorage.setItem(size, value);
+  },
+  setBgColorStorage: function (color, bg) {
+    localStorage.setItem(color, bg);
+  },
+  setFontFamilyStorage: function (type, family) {
+    localStorage.setItem(type, family);
+  },
+  setSpaceLineStorage: function (space, size) {
+    localStorage.setItem(space, size);
+  },
+};
