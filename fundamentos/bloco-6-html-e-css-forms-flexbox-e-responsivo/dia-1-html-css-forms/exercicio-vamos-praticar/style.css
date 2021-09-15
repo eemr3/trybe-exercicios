@@ -104,3 +104,24 @@ form {
 #botao-enviar:hover {
   background-color: green;
 }
+
+#limpar-dados {
+  padding: 10px 20px;
+  width: 160px;
+  margin-bottom: 50px;
+  background-color: rgb(223, 90, 2);
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s background-color ease;
+}
+
+#limpar-dados:hover {
+  background-color: tomato;
+}
+
+.erro-form {
+  color: rgb(238, 48, 48);
+}
