@@ -1,14 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Formulário</title>
-</head>
-<body>
-  
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formulário de cadastro</h1>
+    </header>
+    <main id="container">
+      <form action="" method="GET">
+        <fieldset id="dados-pessoais">
+          <legend>Dados pessoais</legend>
+          <label for="name-input">
+            Nome completo
+            <input
+              id="name-input"
+              type="text"
+              maxlength="40"
+              required
+              placeholder="Digite seu nome"
+            />
+          </label>
+          <label for="email-input">
+            E-mail
+            <input
+              id="email-input"
+              type="email"
+              maxlength="50"
+              required
+              placeholder="Digite seu e-mail"
+            />
+          </label>
+          <label for="cpf-input">
+            CPF
+            <input
+              id="cpf-input"
+              type="text"
+              maxlength="11"
+              placeholder="Digite seu CPF"
+              required
+            />
+          </label>
+          <label for="endereco-input">
+            Endereço completo
+            <input
+              type="text"
+              id="endereco-input"
+              maxlength="200"
+              required
+              placeholder="Digite seu endereço"
+            />
+          </label>
+          <label for="cidade-input">
+            Cidade
+            <input
+              type="text"
+              id="cidade-input"
+              maxlength="28"
+              required
+              placeholder="Cidade onde mora"
+            />
+          </label>
+          <label for="estado-select">
+            Estado
+            <select name="estado" id="estado-select" required></select>
+          </label>
+          <label for="complemento-casa">
+            <input
+              type="radio"
+              id="complemento-casa"
+              required
+              name="complemento"
+            />
+            Casa
+          </label>
+          <label for="complemtento-ap">
+            <input
+              type="radio"
+              id="complemento-ap"
+              name="complemento"
+              required
+            />
+            Apartamento
+          </label>
+        </fieldset>
+        <fieldset id="dados-proficionais">
+          <legend>Dados profissionais</legend>
+          <textarea
+            name="curriculo"
+            id="curriculo-text"
+            cols="30"
+            rows="10"
+            placeholder="Resumo do currículo"
+            maxlength="1000"
+            required
+          ></textarea>
+          <label for="cargo-input">
+            Cargo
+            <input
+              type="text"
+              id="cargo-input"
+              maxlength="40"
+              required
+              placeholder="Digite o cargo"
+            />
+          </label>
+          <label for="descricao-cargo">
+            Descrição
+            <input
+              type="text"
+              id="descricao-cargo"
+              maxlength="500"
+              required
+              placeholder="Descrição do cargo"
+            />
+          </label>
+          <label for="data-inicio">
+            <input type="date" id="data-inicio" required />
+          </label>
+        </fieldset>
+        <button id="botao-enviar" type="submit">Enviar</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
