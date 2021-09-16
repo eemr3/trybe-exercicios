@@ -80,12 +80,13 @@ form {
 }
 
 #curriculo-text {
-  margin-bottom: 12px;
   resize: none;
+  width: 100%;
 }
 
 #data-inicio {
   padding: 3px;
+  margin-bottom: 20px;
 }
 
 #botao-enviar {
@@ -124,4 +125,38 @@ form {
 
 .erro-form {
   color: rgb(238, 48, 48);
+}
+
+#erro-data {
+  display: inline-block;
+}
+
+#estado-select {
+  padding: 5px;
+}
+
+#textArea-content {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+#erro-textArea {
+  display: block;
+}
+
+#curriculo-contente {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+#curriculo-pronto div {
+  margin-bottom: 10px;
+}
+
+#complemento-content {
+  padding: 10px;
 }

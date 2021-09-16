@@ -43,7 +43,7 @@
             CPF
             <input
               class="input-form"
-              id="cpf-input"
+              id="email-input"
               type="text"
               maxlength="11"
               placeholder="Digite seu CPF"
@@ -79,37 +79,47 @@
             Estado
             <select name="estado" id="estado-select" required></select>
           </label>
-          <label for="complemento-casa">
-            <input
-              type="radio"
-              id="complemento-casa"
-              required
-              name="complemento"
-              checked
-            />
-            Casa
-          </label>
-          <label for="complemtento-ap">
-            <input
-              type="radio"
-              id="complemento-ap"
-              name="complemento"
-              required
-            />
-            Apartamento
-          </label>
+          <fieldset id="complemento-content">
+            <legend>complemento</legend>
+            <label for="complemento-casa">
+              <input
+                type="radio"
+                id="complemento-casa"
+                required
+                name="complemento"
+                value="Casa"
+                class="complemento-input"
+                checked
+              />
+              Casa
+            </label>
+            <label for="complemtento-ap">
+              <input
+                type="radio"
+                id="complemento-ap"
+                name="complemento"
+                value="Apartamento"
+                required
+                class="complemento-input"
+              />
+              Apartamento
+            </label>
+          </fieldset>
         </fieldset>
         <fieldset id="dados-proficionais">
           <legend>Dados profissionais</legend>
-          <textarea
-            name="curriculo"
-            id="curriculo-text"
-            cols="30"
-            rows="10"
-            placeholder="Resumo do currículo"
-            maxlength="1000"
-            required
-          ></textarea>
+          <div id="textArea-content">
+            <textarea
+              name="curriculo"
+              id="curriculo-text"
+              cols="30"
+              rows="10"
+              placeholder="Resumo do currículo"
+              maxlength="1000"
+              required
+            ></textarea>
+            <span id="erro-textArea" class="erro-form"></span>
+          </div>
           <label for="cargo-input">
             Cargo
             <input
@@ -136,7 +146,8 @@
           </label>
           <label for="data-inicio">
             Data do início
-            <input type="text" id="data-inicio" required />
+            <input type="text" id="data-inicio" required maxlength="10" />
+            <span class="erro-form" id="erro-data"></span>
           </label>
         </fieldset>
         <div id="botoes-form">
@@ -144,6 +155,9 @@
           <button type="reset" id="limpar-dados">Limpar Dados</button>
         </div>
       </form>
+      <section id="curriculo-contente">
+        <div id="curriculo-pronto"></div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>

@@ -1,61 +1,61 @@
 const estados = [
-  "Rondônia",
   "Acre",
-  "Amazonas",
-  "Roraima",
-  "Pará",
-  "Amapá",
-  "Tocantins",
-  "Maranhão",
-  "Piauí",
-  "Ceará",
-  "Rio Grande do Norte",
-  "Paraíba",
-  "Pernambuco",
   "Alagoas",
-  "Sergipe",
+  "Amapá",
+  "Amazonas",
   "Bahia",
-  "Minas Gerais",
-  "Espírito Santo",
-  "Rio de Janeiro",
-  "São Paulo",
-  "Paraná",
-  "Santa Catarina",
-  "Rio Grande do Sul",
-  "Mato Grosso do Sul",
-  "Mato Grosso",
-  "Goiás",
+  "Ceará",
   "Distrito Federal",
+  "Espírito Santo",
+  "Goiás",
+  "Maranhão",
+  "Mato Grosso",
+  "Mato Grosso do Sul",
+  "Minas Gerais",
+  "Paraná",
+  "Paraíba",
+  "Pará",
+  "Pernambuco",
+  "Piauí",
+  "Rio Grande do Norte",
+  "Rio Grande do Sul",
+  "Rio de Janeiro",
+  "Rondônia",
+  "Roraima",
+  "Santa Catarina",
+  "Sergipe",
+  "São Paulo",
+  "Tocantins",
 ];
 
 const uf = [
-  "RO",
   "AC",
-  "AM",
-  "RR",
-  "PA",
-  "AP",
-  "TO",
-  "MA",
-  "PI",
-  "CE",
-  "RN",
-  "PB",
-  "PE",
   "AL",
-  "SE",
+  "AM",
+  "AP",
   "BA",
-  "MG",
-  "ES",
-  "RJ",
-  "SP",
-  "PR",
-  "SC",
-  "RS",
-  "MS",
-  "MT",
-  "GO",
+  "CE",
   "DF",
+  "ES",
+  "GO",
+  "MA",
+  "MT",
+  "MS",
+  "MG",
+  "PR",
+  "PB",
+  "PA",
+  "PE",
+  "PI",
+  "RN",
+  "RS",
+  "RJ",
+  "RO",
+  "RR",
+  "SC",
+  "SE",
+  "SP",
+  "TO",
 ];
 
 function validateDataForm() {
@@ -69,19 +69,135 @@ function validateDataForm() {
   return message;
 }
 
+function generateUf() {
+  const selectEstado = document.querySelector("#estado-select");
+
+  for (let index = 0; index < estados.length; index += 1) {
+    const optionSelect = document.createElement("option");
+    optionSelect.setAttribute("value", uf[index]);
+    optionSelect.innerHTML = estados[index];
+    selectEstado.appendChild(optionSelect);
+  }
+}
+
+function validaTextArea() {
+  const textAreaDados = document.querySelector("#curriculo-text");
+  let message = "";
+  if (textAreaDados.value === "") {
+    message = "Campo obrigatório! Por favor preencher.";
+  }
+  return message;
+}
+generateUf();
+
+function getDateAndValidate() {
+  const dateInput = document.querySelector("#data-inicio");
+  const spanErroData = document.querySelector("#erro-data");
+  const dataFormat = dateInput.value.replace(/-/g, "/");
+  const validateDia = dataFormat.split("/")[0];
+  const validaMes = dataFormat.split("/")[1];
+  const validaAno = dataFormat.split("/")[2];
+  // const message = "";
+  if (!validateDia > 0 || validateDia > 31) {
+    return (spanErroData.innerText =
+      "Dia do mês incorreto! Não pode ser menor que 0 e nem mairo 31.");
+  }
+  if (!validaMes > 0 || validaMes > 12) {
+    return (spanErroData.innerText =
+      "Mês do ano incorreto! O mês não pode ser menor que 0 e nem mairo que 12");
+  }
+  if (!validaAno > 0) {
+    return (spanErroData.innerText =
+      "Ano incorreto! O ano não pode ser menor que 0");
+  }
+  return true;
+}
+
+function getValueRadioButton() {
+  const complento = document.querySelectorAll(".complemento-input");
+  for (let index = 0; index < complento.length; index += 1) {
+    if (complento[index].checked) {
+      return complento[index].value;
+    }
+  }
+}
+
+function setDadosDoCurriculo() {
+  const areaDeMotagemCurriculo = document.querySelector("#curriculo-pronto");
+  const nameInpur = document.querySelector("#name-input");
+  const emailInput = document.querySelector("#email-input");
+  const enderecoInput = document.querySelector("#endereco-input");
+  const cidadeImput = document.querySelector("#cidade-input");
+  const estadoInput = document.querySelector("#estado-select");
+  const complento = getValueRadioButton();
+
+  const textAreaInput = document.querySelector("#curriculo-text");
+  const cargoInput = document.querySelector("#cargo-input");
+  const descricaoCargo = document.querySelector("#descricao-cargo");
+  const dataInicioInput = document.querySelector("#data-inicio");
+  const arrayvalueElement = [
+    nameInpur.value,
+    emailInput.value,
+    enderecoInput.value,
+    cidadeImput.value,
+    estadoInput.value,
+    complento,
+    textAreaInput.value,
+    cargoInput.value,
+    descricaoCargo.value,
+    dataInicioInput.value.replace(/-/g, "/"),
+  ];
+
+  for (let index = 0; index < 10; index += 1) {
+    const divRsultado = document.createElement("div");
+    divRsultado.innerHTML = arrayvalueElement[index];
+    areaDeMotagemCurriculo.appendChild(divRsultado);
+  }
+}
+
 const btnEnviarForm = document.querySelector("#botao-enviar");
 btnEnviarForm.addEventListener("click", (event) => {
   event.preventDefault();
   const spanMessage = document.querySelectorAll(".erro-form");
-  let message = validateDataForm();
-  console.log(message);
+  const spanErroTextArea = document.querySelector("#erro-textArea");
+  const spanErroData = document.querySelector("#erro-data");
+
+  const messageInput = validateDataForm();
+  const messageTextArea = validaTextArea();
+  const messageDateErro = getDateAndValidate();
+
   for (let index = 0; index < spanMessage.length; index += 1) {
-    if (message !== "") {
-      spanMessage[index].innerHTML = message;
+    if (messageInput !== "") {
+      spanMessage[index].innerHTML = messageInput;
     } else {
       spanMessage[index].innerText = "";
     }
   }
+
+  if (messageTextArea !== "") {
+    return (spanErroTextArea.innerText = messageTextArea);
+  }
+
+  if (messageDateErro === true) {
+    setDadosDoCurriculo();
+  } else {
+    return (spanErroData.innerText = messageDateErro);
+  }
 });
 
-function generateUf() {}
+const btnReset = document.querySelector("#limpar-dados");
+btnReset.addEventListener("click", () => {
+  const areaDeMotagemCurriculo = document.querySelector("#curriculo-pronto");
+  areaDeMotagemCurriculo.innerHTML = "";
+});
+// if (
+//   !validateDia > 0 ||
+//   validateDia > 31 ||
+//   !validaMes > 0 ||
+//   validaMes > 12 ||
+//   !validaAno > 0 ||
+//   validaAno < 1980
+// ) {
+//   return (spanErroData.innerText =
+//     "Data no formato incorrto! Formato correto dia/mês/ano.");
+// }
