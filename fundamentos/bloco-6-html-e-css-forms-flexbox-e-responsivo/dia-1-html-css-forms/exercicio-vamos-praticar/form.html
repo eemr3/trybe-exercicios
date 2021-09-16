@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <header>
+      <h1>Formulário de cadastro</h1>
+    </header>
+    <main id="container">
+      <form action="" method="GET">
+        <fieldset id="dados-pessoais">
+          <legend>Dados pessoais</legend>
+          <label for="name-input">
+            Nome completo
+            <input
+              class="input-form"
+              id="name-input"
+              type="text"
+              maxlength="40"
+              required
+              placeholder="Digite seu nome"
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="email-input">
+            E-mail
+            <input
+              class="input-form"
+              id="email-input"
+              type="email"
+              maxlength="50"
+              required
+              placeholder="Digite seu e-mail"
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="cpf-input">
+            CPF
+            <input
+              class="input-form"
+              id="email-input"
+              type="text"
+              maxlength="11"
+              placeholder="Digite seu CPF"
+              required
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="endereco-input">
+            Endereço completo
+            <input
+              class="input-form"
+              type="text"
+              id="endereco-input"
+              maxlength="200"
+              required
+              placeholder="Digite seu endereço"
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="cidade-input">
+            Cidade
+            <input
+              class="input-form"
+              type="text"
+              id="cidade-input"
+              maxlength="28"
+              required
+              placeholder="Cidade onde mora"
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="estado-select">
+            Estado
+            <select name="estado" id="estado-select" required></select>
+          </label>
+          <fieldset id="complemento-content">
+            <legend>complemento</legend>
+            <label for="complemento-casa">
+              <input
+                type="radio"
+                id="complemento-casa"
+                required
+                name="complemento"
+                value="Casa"
+                class="complemento-input"
+                checked
+              />
+              Casa
+            </label>
+            <label for="complemtento-ap">
+              <input
+                type="radio"
+                id="complemento-ap"
+                name="complemento"
+                value="Apartamento"
+                required
+                class="complemento-input"
+              />
+              Apartamento
+            </label>
+          </fieldset>
+        </fieldset>
+        <fieldset id="dados-proficionais">
+          <legend>Dados profissionais</legend>
+          <div id="textArea-content">
+            <textarea
+              name="curriculo"
+              id="curriculo-text"
+              cols="30"
+              rows="10"
+              placeholder="Resumo do currículo"
+              maxlength="1000"
+              required
+            ></textarea>
+            <span id="erro-textArea" class="erro-form"></span>
+          </div>
+          <label for="cargo-input">
+            Cargo
+            <input
+              class="input-form"
+              type="text"
+              id="cargo-input"
+              maxlength="40"
+              required
+              placeholder="Digite o cargo"
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="descricao-cargo">
+            Descrição
+            <input
+              class="input-form"
+              type="text"
+              id="descricao-cargo"
+              maxlength="500"
+              required
+              placeholder="Descrição do cargo"
+            />
+            <span class="erro-form"></span>
+          </label>
+          <label for="data-inicio">
+            Data do início
+            <input type="text" id="data-inicio" required maxlength="10" />
+            <span class="erro-form" id="erro-data"></span>
+          </label>
+        </fieldset>
+        <div id="botoes-form">
+          <button id="botao-enviar" type="submit">Enviar</button>
+          <button type="reset" id="limpar-dados">Limpar Dados</button>
+        </div>
+      </form>
+      <section id="curriculo-contente">
+        <div id="curriculo-pronto"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
