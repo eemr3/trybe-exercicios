@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="dist/css/DatePickerX.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="dist/js/DatePickerX.min.js"></script>
-
+    <link
+      href="node_modules/popup-validation/bin/validation.min.css"
+      rel="stylesheet"
+    />
+    <script src="node_modules/popup-validation/bin/validation.min.js"></script>
     <title>Formulário</title>
   </head>
   <body>
@@ -21,12 +25,13 @@
       <h1 class="text-center display-1">Formulário de cadastro</h1>
     </header>
     <main id="container" class="container">
-      <form action="" method="GET">
+      <form action="" method="GET" id="form-trybe">
         <p class="lead">Dados pessoais</p>
         <div class="container">
           <label class="form-label" for="name-input"> Nome completo </label>
           <input
-            class="form-control input-form"
+            class="form-control input-form validate"
+            data-validate="required,email"
             id="name-input"
             type="text"
             maxlength="40"
@@ -38,7 +43,8 @@
         <div class="container">
           <label class="form-label" for="email-input"> E-mail </label>
           <input
-            class="form-control input-form"
+            class="form-control input-form validate"
+            data-validate="required,email"
             id="email-input"
             type="email"
             maxlength="50"
@@ -50,7 +56,8 @@
         <div class="container">
           <label class="form-label" for="cpf-input"> CPF </label>
           <input
-            class="form-control input-form"
+            class="form-control input-form validate"
+            data-validate="required,email"
             id="email-input"
             type="text"
             maxlength="11"
@@ -64,7 +71,8 @@
             Endereço completo
           </label>
           <input
-            class="form-control input-form"
+            class="form-control input-form validate"
+            data-validate="required,email"
             type="text"
             id="endereco-input"
             maxlength="200"
@@ -76,7 +84,8 @@
         <div class="container">
           <label class="form-label" for="cidade-input"> Cidade </label>
           <input
-            class="form-control input-form"
+            class="form-control input-form validate"
+            data-validate="required,email"
             type="text"
             id="cidade-input"
             maxlength="28"
@@ -88,7 +97,8 @@
         <div class="container">
           <label class="form-label" for="estado-select"> Estado </label>
           <select
-            class="form-select"
+            class="form-select validate"
+            data-validate="required,email"
             name="estado"
             id="estado-select"
             required
@@ -103,7 +113,8 @@
               required
               name="complemento"
               value="Casa"
-              class="complemento-input form-check-input"
+              class="complemento-input form-check-input validate"
+              data-validate="required,email"
               checked
             />
             <label class="form-label" for="complemento-casa"> Casa </label>
@@ -115,7 +126,8 @@
               name="complemento"
               value="Apartamento"
               required
-              class="complemento-input form-check-input"
+              class="complemento-input form-check-input validate"
+              data-validate="required,email"
             />
             <label class="form-label" for="complemtento-ap">
               Apartamento
@@ -126,7 +138,8 @@
         <p class="lead">Dados profissionais</p>
         <div id="textArea-content" class="container">
           <textarea
-            class="input-form form-control"
+            class="input-form form-control validate"
+            data-validate="required,email"
             name="curriculo"
             id="curriculo-text"
             cols="30"
@@ -140,7 +153,8 @@
         <div class="container">
           <label class="form-label" for="cargo-input"> Cargo </label>
           <input
-            class="input-form form-control"
+            class="input-form form-control validate"
+            data-validate="required,email"
             type="text"
             id="cargo-input"
             maxlength="40"
@@ -153,7 +167,8 @@
         <div class="container">
           <label class="form-label" for="descricao-cargo"> Descrição </label>
           <input
-            class="input-form form-control"
+            class="input-form form-control validate"
+            data-validate="required,email"
             type="text"
             id="descricao-cargo"
             maxlength="500"
@@ -165,7 +180,8 @@
         <div class="container">
           <label class="form-label" for="data-inicio"> Data do início </label>
           <input
-            class="form-control"
+            class="form-control validate"
+            data-validate="required,email"
             type="text"
             id="datepicker"
             required
