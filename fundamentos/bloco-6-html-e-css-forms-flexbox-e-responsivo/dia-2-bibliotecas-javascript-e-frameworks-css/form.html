@@ -31,11 +31,10 @@
           <label class="form-label" for="name-input"> Nome completo </label>
           <input
             class="form-control input-form validate"
-            data-validate="required,email"
+            data-validate="required"
             id="name-input"
             type="text"
             maxlength="40"
-            required
             placeholder="Digite seu nome"
           />
           <span class="erro-form text-danger"></span>
@@ -44,11 +43,10 @@
           <label class="form-label" for="email-input"> E-mail </label>
           <input
             class="form-control input-form validate"
-            data-validate="required,email"
+            data-validate="required, email"
             id="email-input"
             type="email"
             maxlength="50"
-            required
             placeholder="Digite seu e-mail"
           />
           <span class="erro-form text-danger"></span>
@@ -57,12 +55,11 @@
           <label class="form-label" for="cpf-input"> CPF </label>
           <input
             class="form-control input-form validate"
-            data-validate="required,email"
+            data-validate="required"
             id="email-input"
             type="text"
             maxlength="11"
             placeholder="Digite seu CPF"
-            required
           />
           <span class="erro-form text-danger"></span>
         </div>
@@ -72,11 +69,10 @@
           </label>
           <input
             class="form-control input-form validate"
-            data-validate="required,email"
+            data-validate="required"
             type="text"
             id="endereco-input"
             maxlength="200"
-            required
             placeholder="Digite seu endereço"
           />
           <span class="erro-form text-danger"></span>
@@ -85,11 +81,10 @@
           <label class="form-label" for="cidade-input"> Cidade </label>
           <input
             class="form-control input-form validate"
-            data-validate="required,email"
+            data-validate="required"
             type="text"
             id="cidade-input"
             maxlength="28"
-            required
             placeholder="Cidade onde mora"
           />
           <span class="erro-form text-danger"></span>
@@ -98,10 +93,9 @@
           <label class="form-label" for="estado-select"> Estado </label>
           <select
             class="form-select validate"
-            data-validate="required,email"
+            data-validate="required"
             name="estado"
             id="estado-select"
-            required
           ></select>
         </div>
         <div class="container">
@@ -109,12 +103,10 @@
           <div class="form-check">
             <input
               type="radio"
-              id="complemento-casa"
-              required
               name="complemento"
+              id="complemento-casa"
               value="Casa"
-              class="complemento-input form-check-input validate"
-              data-validate="required,email"
+              class="form-check-input"
               checked
             />
             <label class="form-label" for="complemento-casa"> Casa </label>
@@ -122,12 +114,10 @@
           <div class="form-check">
             <input
               type="radio"
-              id="complemento-ap"
               name="complemento"
+              id="complemento-ap"
               value="Apartamento"
-              required
-              class="complemento-input form-check-input validate"
-              data-validate="required,email"
+              class="form-check-input"
             />
             <label class="form-label" for="complemtento-ap">
               Apartamento
@@ -139,14 +129,13 @@
         <div id="textArea-content" class="container">
           <textarea
             class="input-form form-control validate"
-            data-validate="required,email"
+            data-validate="required"
             name="curriculo"
             id="curriculo-text"
             cols="30"
             rows="10"
             placeholder="Resumo do currículo"
             maxlength="1000"
-            required
           ></textarea>
           <span id="erro-textArea" class="text-danger"></span>
         </div>
@@ -154,11 +143,10 @@
           <label class="form-label" for="cargo-input"> Cargo </label>
           <input
             class="input-form form-control validate"
-            data-validate="required,email"
+            data-validate="required"
             type="text"
             id="cargo-input"
             maxlength="40"
-            required
             placeholder="Digite o cargo"
           />
           <span class="erro-form text-danger"></span>
@@ -168,11 +156,10 @@
           <label class="form-label" for="descricao-cargo"> Descrição </label>
           <input
             class="input-form form-control validate"
-            data-validate="required,email"
+            data-validate="required"
             type="text"
             id="descricao-cargo"
             maxlength="500"
-            required
             placeholder="Descrição do cargo"
           />
           <span class="erro-form text-danger"></span>
@@ -181,10 +168,9 @@
           <label class="form-label" for="data-inicio"> Data do início </label>
           <input
             class="form-control validate"
-            data-validate="required,email"
+            data-validate="required"
             type="text"
             id="datepicker"
-            required
             maxlength="10"
             autocomplete="off"
           />
