@@ -97,7 +97,7 @@ function getDateAndValidate() {
   const validateDia = dataFormat.split("/")[0];
   const validaMes = dataFormat.split("/")[1];
   const validaAno = dataFormat.split("/")[2];
-  // const message = "";
+
   if (!validateDia > 0 || validateDia > 31) {
     return (spanErroData.innerText =
       "Dia do mês incorreto! Não pode ser menor que 0 e nem mairo 31.");
