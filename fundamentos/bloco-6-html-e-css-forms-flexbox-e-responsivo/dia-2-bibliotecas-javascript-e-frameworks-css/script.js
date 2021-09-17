@@ -58,16 +58,19 @@ const uf = [
   "TO",
 ];
 
-function validateDataForm() {
-  const inputsForm = document.querySelectorAll(".input-form");
-  let message = "";
-  for (let index = 0; index < inputsForm.length; index += 1) {
-    if (inputsForm[index].value.trim() === "") {
-      message = "Campo obrigatório! Por favor preencha.";
-    }
-  }
-  return message;
-}
+validation.init("#form-trybe");
+
+// validation.highlight();
+// function validateDataForm() {
+//   const inputsForm = document.querySelectorAll(".input-form");
+//   let message = "";
+//   for (let index = 0; index < inputsForm.length; index += 1) {
+//     if (inputsForm[index].value.trim() === "") {
+//       message = "Campo obrigatório! Por favor preencha.";
+//     }
+//   }
+//   return message;
+// }
 
 function generateUf() {
   const selectEstado = document.querySelector("#estado-select");
@@ -80,15 +83,15 @@ function generateUf() {
   }
 }
 
-function validaTextArea() {
-  const textAreaDados = document.querySelector("#curriculo-text");
+// function validaTextArea() {
+//   const textAreaDados = document.querySelector("#curriculo-text");
 
-  let message = "";
-  if (textAreaDados.value === "") {
-    message = "Campo obrigatório! Por favor preencher.";
-  }
-  return message;
-}
+//   let message = "";
+//   if (textAreaDados.value === "") {
+//     message = "Campo obrigatório! Por favor preencher.";
+//   }
+//   return message;
+// }
 
 generateUf();
 
@@ -137,70 +140,8 @@ function setPikedayLibDate() {
 
 setPikedayLibDate();
 
-function getDateAndValidate() {
-  const dateInput = document.querySelector("#datepicker");
-  dateInput.DatePickerX.init({
-    mondayFirst: true,
-    format: "dd/mm/yyyy",
-    minDate: new Date(0, 0),
-    maxDate: new Date(9999, 11, 31),
-    weekDayLabels: ["Mo", "Tu", "We", "Th", "Fr", "St", "Su"],
-    shortMonthLabels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
-    singleMonthLabels: [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ],
-    todayButton: true,
-    todayButtonLabel: "Today",
-    clearButton: true,
-    clearButtonLabel: "Clear",
-  });
-  const spanErroData = document.querySelector("#erro-data");
-  const dataFormat = dateInput.value.replace(/-/g, "/");
-  const validateDia = dataFormat.split("/")[0];
-  const validaMes = dataFormat.split("/")[1];
-  const validaAno = dataFormat.split("/")[2];
-  const message = "";
-  if (!validateDia > 0 || validateDia > 31) {
-    return (spanErroData.innerText =
-      "Dia do mês incorreto! Não pode ser menor que 0 e nem mairo 31.");
-  }
-  if (!validaMes > 0 || validaMes > 12) {
-    return (spanErroData.innerText =
-      "Mês do ano incorreto! O mês não pode ser menor que 0 e nem mairo que 12");
-  }
-  if (!validaAno > 0) {
-    return (spanErroData.innerText =
-      "Ano incorreto! O ano não pode ser menor que 0");
-  }
-  return true;
-}
-
 function getValueRadioButton() {
-  const complento = document.querySelectorAll(".complemento-input");
+  const complento = document.querySelectorAll(".form-check-input");
   for (let index = 0; index < complento.length; index += 1) {
     if (complento[index].checked) {
       return complento[index].value;
@@ -231,7 +172,7 @@ function setDadosDoCurriculo() {
     textAreaInput.value,
     cargoInput.value,
     descricaoCargo.value,
-    dataInicioInput.value.replace(/-/g, "/"),
+    dataInicioInput.value,
   ];
 
   for (let index = 0; index < 10; index += 1) {
@@ -244,30 +185,11 @@ function setDadosDoCurriculo() {
 const btnEnviarForm = document.querySelector("#botao-enviar");
 btnEnviarForm.addEventListener("click", (event) => {
   event.preventDefault();
-  const spanMessage = document.querySelectorAll(".erro-form");
-  const spanErroTextArea = document.querySelector("#erro-textArea");
-  const spanErroData = document.querySelector("#erro-data");
 
-  const messageInput = validateDataForm();
-  const messageTextArea = validaTextArea();
-  const messageDateErro = getDateAndValidate();
-
-  for (let index = 0; index < spanMessage.length; index += 1) {
-    if (messageInput !== "") {
-      spanMessage[index].innerHTML = messageInput;
-    } else {
-      spanMessage[index].innerText = "";
-    }
-  }
-
-  if (messageTextArea !== "") {
-    return (spanErroTextArea.innerText = messageTextArea);
-  }
-
-  if (messageDateErro === true) {
-    setDadosDoCurriculo();
+  if (!validation.validate()) {
+    validation.highlight();
   } else {
-    return (spanErroData.innerText = messageDateErro);
+    setDadosDoCurriculo();
   }
 });
 
