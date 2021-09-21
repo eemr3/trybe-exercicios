@@ -83,7 +83,8 @@
 
 @media print {
   #header,
-  #navigation {
+  #navigation,
+  #footer {
     display: none;
   }
 
@@ -99,5 +100,49 @@
 
   #content {
     padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #aside {
+    display: none;
+  }
+
+  #content {
+    width: 97%;
+  }
+
+  #content p {
+    max-width: 90%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  #navigation {
+    margin-top: 80px;
+    padding: 40px;
+  }
+
+  #navigation ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navigation ul li a {
+    border: none;
   }
 }
