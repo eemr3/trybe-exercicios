@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-top: 70px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+figure {
+  margin: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+section,
+main {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+section p {
+  font-size: 1.01em;
+  line-height: 27px;
+  text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: tomato;
+    color: white;
+    margin: 0 20px;
+    font-size: 17px;
+  }
+
+  img {
+    max-width: 90%;
+  }
+  main {
+    max-width: 100%;
+  }
+
+  figure {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    max-width: 50%;
+  }
+
+  .grid-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  body {
+    background-color: royalblue;
+    font-size: 18px;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  figure {
+    margin: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    max-width: 50%;
+  }
+}
+
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 1.2em/1.2 Helvetica, aria, sans-serif;
+  margin: 0 3%;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 0.9em 0 0 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 1.5em 0 0 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin: 0 0 25px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.8em;
+}
+
+@media screen and (min-width: 794px) {
+  body {
+    background: rgba(0, 0, 255, 0.2);
+    margin: 25px 6%;
+  }
+
+  figure {
+    float: left;
+    width: 45%;
+    margin-right: 4.5%;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  body {
+    background: rgba(0, 255, 0, 0.2);
+    margin: 25px 10%;
+    max-width: 1130px;
+  }
+
+  figure {
+    width: 30%;
+    margin-right: 2.5%;
+  }
+} */
