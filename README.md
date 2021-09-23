@@ -41,20 +41,20 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Meme Generator]()_
+- [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-016-a-project-meme-generator/tree/emerson-moreira-project-meme-generator-project)_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-016-a-project-pixels-art/tree/emerson-moreira-project-pixels-art)_
 - [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-016-a-project-todo-list/tree/emerson-moreira-todo-list-project)_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-016-a-project-color-guess/tree/emerson-moreira-project-color-guess)_
 - [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-016-a-project-mistery-letter/tree/emerson-moreira-project-mistery-letter)_
 
 ##### Bloco 6: HTML & CSS avançado
 
-- [ ] 6-1: _HTML & CSS - Forms_
-- [ ] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
-- [ ] 6-3: _CSS Flexbox - Part 1_
-- [ ] 6-4: _CSS Flexbox - Part 2_
-- [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - Página inicial do Facebook]()_
+- [x] 6-1: _HTML & CSS - Forms_
+- [x] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
+- [x] 6-3: _CSS Flexbox - Part 1_
+- [x] 6-4: _CSS Flexbox - Part 2_
+- [x] 6-5: _CSS Responsivo - Mobile First_
+- [x] 6-6: _[Projeto - Página inicial do Facebook](https://github.com/tryber/sd-016-a-project-trybewarts/tree/emerson-moreira-trybewarts)_
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
