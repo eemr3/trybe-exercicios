@@ -3,20 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
     <title>Camarão Mantis</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#home">Página Inicial</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <header id="home">
-      <h1>Soco a 80km/h: Conheça o Stomatopoda</h1>
-    </header>
-    <main>
+    <div class="px-4 py-5 my-5 text-center">
+      <header class="mb-auto" id="home">
+        <div class="px-3">
+          <h1 class="display-5 fw-bold">
+            Soco a 80km/h: Conheça o Stomatopoda
+          </h1>
+        </div>
+      </header>
+    </div>
+    <main class="container">
       <article id="sobre">
         <section>
           <h2>Descrição</h2>
@@ -26,63 +59,64 @@
             laranjas e com a carapaça com estampas tipo leopardo.
           </p>
           <h3>Nome ciêntifico: <em>Odontodactylus scyllarus</em></h3>
-          <section>
-            <table>
-              <caption>
-                Classificação científica
-              </caption>
-              <tr>
-                <th>Reino</th>
-                <td>
-                  Reino é a categoria superior da <br />classificação científica
-                  dos organismos <br />introduzida por Linnaeus no século XVIII.
-                </td>
-              </tr>
-              <tr>
-                <th>Filo</th>
-                <td>
-                  Filo (em latim: phylum; em grego: Φῦλον;<br />
-                  plural: Φῦλα: phyla), é um taxon usado na
-                  <br />classificação cientifica dos seres vivos.
-                </td>
-              </tr>
-              <tr>
-                <th>Subfilo</th>
-                <td>
-                  Gradação da sistemática zoológica, que se situa entre o filo e
-                  a classe.
-                </td>
-              </tr>
-              <tr>
-                <th>Classe</th>
-                <td>
-                  Classe é uma categoria utilizada na classificação<br />
-                  científica dos seres vivos, o sistema taxonómico mais<br />
-                  utilizado na moderna biologia. Naquela classificação,
-                  <br />a Classe é a categoria taxonómica constituída por um
-                  conjunto de Ordens;
-                </td>
-              </tr>
-              <tr>
-                <th>Subclasse</th>
-                <td>
-                  ategoria taxonômica, classificatória, localizada acima<br />
-                  da ordem e imediatamente abaixo da classe.
-                </td>
-              </tr>
-              <tr>
-                <th>Ordem</th>
-                <td>
-                  Ordem (latim: ordo, plural ordines) é um taxon de <br />alto
-                  nível hierárquico utilizado no sistema <br />de classificação
-                  científica dos seres vivos para agrupar<br />
-                  famílias constituídas por espécies que apresentam entre
-                  <br />si um elevado grau de semelhança morfofuncional.
-                </td>
-              </tr>
-            </table>
-          </section>
         </section>
+        <section>
+          <table>
+            <caption>
+              Classificação científica
+            </caption>
+            <tr>
+              <th>Reino</th>
+              <td>
+                Reino é a categoria superior da <br />classificação científica
+                dos organismos <br />introduzida por Linnaeus no século XVIII.
+              </td>
+            </tr>
+            <tr>
+              <th>Filo</th>
+              <td>
+                Filo (em latim: phylum; em grego: Φῦλον;<br />
+                plural: Φῦλα: phyla), é um taxon usado na
+                <br />classificação cientifica dos seres vivos.
+              </td>
+            </tr>
+            <tr>
+              <th>Subfilo</th>
+              <td>
+                Gradação da sistemática zoológica, que se situa entre o filo e a
+                classe.
+              </td>
+            </tr>
+            <tr>
+              <th>Classe</th>
+              <td>
+                Classe é uma categoria utilizada na classificação<br />
+                científica dos seres vivos, o sistema taxonómico mais<br />
+                utilizado na moderna biologia. Naquela classificação,
+                <br />a Classe é a categoria taxonómica constituída por um
+                conjunto de Ordens;
+              </td>
+            </tr>
+            <tr>
+              <th>Subclasse</th>
+              <td>
+                ategoria taxonômica, classificatória, localizada acima<br />
+                da ordem e imediatamente abaixo da classe.
+              </td>
+            </tr>
+            <tr>
+              <th>Ordem</th>
+              <td>
+                Ordem (latim: ordo, plural ordines) é um taxon de <br />alto
+                nível hierárquico utilizado no sistema <br />de classificação
+                científica dos seres vivos para agrupar<br />
+                famílias constituídas por espécies que apresentam entre
+                <br />si um elevado grau de semelhança morfofuncional.
+              </td>
+            </tr>
+          </table>
+        </section>
+
         <section class="super-soco">
           <h2>Soco veloz</h2>
           <p>
@@ -149,16 +183,35 @@
         </a>
       </aside>
     </main>
-    <footer id="contato">
-      <p>
-        Conteúdo compilado por
-        <a
-          href="https://eemr3.github.io/"
-          target="blank"
-          rel="noreferrer noopener"
-          ><strong>Emerson Moreira</strong></a
-        >, <em>2021</em>.
-      </p>
-    </footer>
+
+    <div class="container sx sm-12">
+      <footer
+        id="contato"
+        class="
+          d-flex
+          flex-wrap
+          justify-content-between
+          align-items-center
+          py-3
+          my-4
+          border-top
+        "
+      >
+        <p class="col-md-4 mb-0 text-muted">
+          Conteúdo compilado por
+          <a
+            href="https://eemr3.github.io/"
+            target="blank"
+            rel="noreferrer noopener"
+            ><strong>Emerson Moreira</strong></a
+          >, <em>2021</em>.
+        </p>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
