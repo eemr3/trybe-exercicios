@@ -147,10 +147,10 @@ function teacherReport(obj, teacher) {
   const subject = [];
   for (const key in obj) {
     if (obj[key].professor === teacher){
-      objectTeacherReport.professor = obj[key].professor;
+      objectTeacherReport["professor"] = obj[key].professor;
       subject.push(Object.values(obj)[0].materia);
-      objectTeacherReport.aulas = subject;
-      objectTeacherReport.estudantes = obj[key].numeroEstudantes + obj[key].numeroEstudantes;
+      objectTeacherReport["aulas"] = subject;
+      objectTeacherReport["estudantes"] = obj[key].numeroEstudantes + obj[key].numeroEstudantes;
     }
   }
   
@@ -158,28 +158,3 @@ function teacherReport(obj, teacher) {
 }
 
 teacherReport(allLessons, 'Maria Clara')
-
-
-const numbers = {
-  one: 1,
-  two: 2
-};
-
-
-const objectArray = Object.entries(numbers);
-
-console.log(objectArray);
-
-// objectArray.forEach(([key, value] )=> {
-//     console.log(key);
-//     console.log(value);
-// });
-const arr = [
-    ['firstName', 'John'],
-    ['lastName', 'Doe'],
-    ['age', 20]
-];
-
-const person = Object.fromEntries(arr);
-
-console.log(person);
