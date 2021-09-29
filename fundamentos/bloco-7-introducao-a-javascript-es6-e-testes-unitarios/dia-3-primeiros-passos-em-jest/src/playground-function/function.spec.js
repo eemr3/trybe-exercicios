@@ -20,4 +20,13 @@ describe("Requirement four", () => {
     expect(decode("5n3v2rs3d1d2")).toBe("universidade");
     expect(decode("b4rb4l2t1")).toBe("borboleta");
   });
+
+  it("Test if other letters/numbers are not converted for each case", () => {
+    expect(encode("boca")).not.toBe("6o7a");
+  });
+
+  it("Test string length returned by function", () => {
+    const lengthStr = "c1rt23r1".length;
+    expect(encode("carteira")).toHaveLength(lengthStr);
+  });
 });
