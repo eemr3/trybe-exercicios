@@ -7,8 +7,14 @@ const encode = (str) => {
     .replace(/u/g, 5);
 };
 
-// console.log(encode("carteira"));
-const decode = () => {};
+const decode = (str) => {
+  return str
+    .replace(/1/g, "a")
+    .replace(/2/g, "e")
+    .replace(/3/g, "i")
+    .replace(/4/g, "o")
+    .replace(/5/g, "u");
+};
 
 module.exports = {
   encode,
