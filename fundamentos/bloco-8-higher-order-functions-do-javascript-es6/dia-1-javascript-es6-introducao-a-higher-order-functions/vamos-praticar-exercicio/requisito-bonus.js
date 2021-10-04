@@ -87,6 +87,12 @@ const gameActions = {
 
     battleMembers.dragon.healthPoints = dragon.healthPoints - resultMage.dano;
     battleMembers.mage.damage = resultMage.dano;
+  },
+  actionDragon: (func, strength) => {
+    const resultDragon = func(strength);
+    battleMembers.warrior.healthPoints = warrior.healthPoints - resultDragon;
+    battleMembers.mage.healthPoints = mage.healthPoints - resultDragon;
+    battleMembers.dragon.damage = resultDragon;
   }
 };
 
@@ -94,5 +100,5 @@ const gameActions = {
 
 gameActions.actionWarrior(randomDamageWarriorValue, warrior.strength, warrior.weaponDmg);
 gameActions.actionMage(damageAndManaSpent, mage.intelligence, mage.mana);
-
+gameActions.actionDragon(randomDamageDragonValue,battleMembers.dragon.strength);
 console.log(battleMembers);
