@@ -45,26 +45,42 @@ const randomDamageWarriorValue = (strength, weaponDmg) => {
 /* 3 - Crie uma função que retorna um objeto com duas chaves e dois valores contendo o dano e a mana gasta pelo mago em um turno.
 O dano será um número aleatório entre o valor do atributo intelligence (dano mínimo) e o valor de intelligence * 2 (dano máximo).
 A mana consumida por turno é 15. Além disto a função deve ter uma condicional, caso o mago tenha menos de 15 de mana o valor de dano recebe uma mensagem (Ex: "Não possui mana suficiente") e a mana gasta é 0. */
-const damageAndManaSpent = (intelligence, mana, turn) => {
+const damageAndManaSpent = (intelligence, mana) => {
   let manaConsumed = 0;
-  if (mana === 0) {
+  if (mana < 15) {
     manaConsumed += 0;
     return 'Não possui mana suficiente'
   } else {
-    manaConsumed += 15 * turn
+    manaConsumed += 15
   }
-  console.log(manaConsumed)
-
+  
   const mageObject = {
     dano: Math.floor(
       Math.random() * (intelligence * 2 - intelligence) + intelligence
     ),
-    mana: mana - manaConsumed,
+    mana: mage.mana = mage.mana - manaConsumed,
   };
 
   return mageObject
 }
 
 
+/* Parte II
+Agora que você já possui a implementação das funções relativas aos três exercícios anteriores, passe-as como parâmetro para outras funções que irão compor um objeto gameActions . O objeto será composto por ações do jogo e cada ação é por denifição uma HOF , pois neste caso, são funções que recebem como parâmetro outra função.
+Copie o código abaixo e inicie sua implementação: */
 
 
+/* 1 - Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior . */
+
+const gameActions = {
+  actionWarrior: (func, strength, weaponDmg) => {
+    const result = func(strength, weaponDmg);
+    
+    battleMembers.dragon.healthPoints = dragon.healthPoints - result;
+    battleMembers.warrior.damage = result;
+  },
+};
+
+
+gameActions.actionWarrior(randomDamageWarriorValue, warrior.strength, warrior.weaponDmg);
+console.log(battleMembers.dragon, battleMembers.warrior)
