@@ -27,8 +27,19 @@ const battleMembers = { mage, warrior, dragon };
 
 /* 1 - Crie uma função que retorna o dano do dragão.
 O dano será um número aleatório entre 15 (dano mínimo) e o valor do atributo strength (dano máximo). */
-const randomNumber = (strength) => {
+const randomDamageDragonValue = (strength) => {
   const damageDragon = Math.floor(Math.random() * (strength - 15) + 15);
   return damageDragon;
 };
+
+/* 2 - Crie uma função que retorna o dano causado pelo warrior .
+O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo). */
+const randomDamageWarriorValue = (strength, weaponDmg) => {
+  const damegeWarrior = Math.floor(
+    Math.random() * ((weaponDmg * strength) - strength) + strength
+  );
+
+  return damegeWarrior;
+};
+
 
