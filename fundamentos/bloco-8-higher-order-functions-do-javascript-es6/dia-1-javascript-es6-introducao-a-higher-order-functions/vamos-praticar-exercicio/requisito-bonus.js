@@ -72,15 +72,27 @@ Copie o código abaixo e inicie sua implementação: */
 
 /* 1 - Crie a primeira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem warrior . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem warrior e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor da chave damage do warrior . */
 
+/* 2 - Crie a segunda HOF que compõe o objeto gameActions . Ela será a função que simula o turno do personagem mage . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo personagem mage e atualizará os healthPoints do monstro dragon . Além disto ela também deve atualizar o valor das chaves damage e mana do mage. */
+
+/* 3 - Crie a terceira HOF que compõe o objeto gameActions . Ela será a função que simula o turno do monstro dragon . Esta HOF receberá como parâmetro a função que calcula o dano deferido pelo monstro dragon e atualizará os healthPoints dos personagens mage e warrior . Além disto ela também deve atualizar o valor da chave damage do monstro. */
+
 const gameActions = {
   actionWarrior: (func, strength, weaponDmg) => {
-    const result = func(strength, weaponDmg);
-    
-    battleMembers.dragon.healthPoints = dragon.healthPoints - result;
-    battleMembers.warrior.damage = result;
+    const resultWarrior = func(strength, weaponDmg);
+    battleMembers.dragon.healthPoints = dragon.healthPoints - resultWarrior;
+    battleMembers.warrior.damage = resultWarrior;
   },
+  actionMage: (func, intelligence, mana) => {
+    const resultMage = func(intelligence, mana);
+
+    battleMembers.dragon.healthPoints = dragon.healthPoints - resultMage.dano;
+    battleMembers.mage.damage = resultMage.dano;
+  }
 };
 
 
+
 gameActions.actionWarrior(randomDamageWarriorValue, warrior.strength, warrior.weaponDmg);
-console.log(battleMembers.dragon, battleMembers.warrior)
+gameActions.actionMage(damageAndManaSpent, mage.intelligence, mage.mana);
+
+console.log(battleMembers);
