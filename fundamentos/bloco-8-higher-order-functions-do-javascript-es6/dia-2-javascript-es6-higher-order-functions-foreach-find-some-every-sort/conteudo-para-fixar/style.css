@@ -1,0 +1,12 @@
+#btn-filter {
+  color: white;
+  background-color: green;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#email-list li {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
