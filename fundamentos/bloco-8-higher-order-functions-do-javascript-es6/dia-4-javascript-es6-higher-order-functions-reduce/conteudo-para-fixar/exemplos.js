@@ -221,3 +221,17 @@ const reportOfHighestGrades = (array) =>
   }));
 
 console.log(reportOfHighestGrades(estudantes));
+
+
+
+
+// function longestNamedBook() {
+//   return books.reduce((accumulator, currentValue) => {
+//     //console.log(currentValue.name.length);
+//     if (currentValue.name.length > accumulator.name.length) {
+//       return currentValue;
+//     }
+//     return accumulator;
+//   });
+// }
+// console.log(longestNamedBook());
