@@ -66,10 +66,9 @@ Dica: cada inicial termina com um ponto. */
 
 
 function authorWith3DotsOnName(booksArray) {
-  const resultNameBook = booksArray.find((book) =>
-    book.author.name.startsWith("J. R. R.")
-  );
+  const resultNameBook = booksArray.find((book) => book.author.name.split(' ').filter((book) => book.endsWith('.')).length === 3);
   return resultNameBook.name;
 }
 
+console.log(authorWith3DotsOnName(books))
 module.exports = { authorWith3DotsOnName };
