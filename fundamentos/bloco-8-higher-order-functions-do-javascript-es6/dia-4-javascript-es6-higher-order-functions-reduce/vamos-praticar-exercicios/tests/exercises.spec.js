@@ -3,6 +3,7 @@ const reduceNames = require("../src/exercise2");
 const averageAge = require("../src/exercise3");
 const longestNamedBook = require("../src/exercise4");
 const containsA = require("../src/exercise5");
+const studentAverage = require("../src/exercise6");
 
 describe("trabalhando com reduce", () => {
   it("retorne um array aprtir de uma matriz", () => {
@@ -37,5 +38,14 @@ describe("trabalhando com reduce", () => {
 
   it('retorne quantas letra "A" existem no array de nomes. Não importando se maiúscula ou minúscula', () => {
     expect(containsA()).toBe(20);
+  });
+  
+  it('retorne um novo array de objestos', () => {
+    const expected = [
+      { name: "Pedro Henrique", average: 7.8 },
+      { name: "Miguel", average: 9.2 },
+      { name: "Maria Clara", average: 8.8 },
+    ];
+    expect(studentAverage()).toEqual(expected);
   });
 });
