@@ -12,10 +12,7 @@ const names = [
 ];
 
 function containsA() {
-  return names.reduce((acc, name) => {
-    const resutl = `${acc} ${name}`
-    return resutl.toUpperCase().match(/A/g);
-}).length
+  return names.reduce((acc, name) => `${acc} ${name}`.toUpperCase().match(/A/g)).length
 }
 
 module.exports = containsA;
