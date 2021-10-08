@@ -64,12 +64,9 @@ const books = [
 // Adicione o código do exercício aqui:
 /* 2 - Crie uma string com os nomes de todas as pessoas autoras. */
 
-const reduceNames = () => books.map((book) => book.author.name).reduce((acc, author, index, array) => {
-  if(index === array.length - 1){
-    return `${acc}, ${author}.`;
-  }
-   return `${acc}, ${author}`;
-});
+const reduceNames = () => books.map((book) => book.author.name).reduce((acc, author, index, array) => (
+  index === array.length - 1 ? `${acc}, ${author}.`: `${acc}, ${author}`
+));
 
-console.log(reduceNames())
+console.log()
 module.exports = reduceNames;
