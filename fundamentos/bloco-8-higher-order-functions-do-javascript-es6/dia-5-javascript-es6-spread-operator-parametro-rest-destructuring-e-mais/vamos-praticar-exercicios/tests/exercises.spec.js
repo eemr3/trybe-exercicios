@@ -2,9 +2,10 @@ const rectangleArea = require("../src/exercise1");
 const sum = require("../src/exercise2");
 const personLikes = require("../src/exercise3");
 const filterPeople = require("../src/exercise4");
-const swap = require('../src/exercise5');
+const swap = require("../src/exercise5");
 const toObject = require("../src/exercise6");
 const shipLength = require("../src/exercise7");
+const greet = require("../src/exercise8");
 
 describe("trabalhando do spreed, rest, parametre defalut", () => {
   it("retorne a área dos 3 retângulos", () => {
@@ -76,17 +77,29 @@ describe("trabalhando do spreed, rest, parametre defalut", () => {
     ]);
   });
 
-  it('retorna um novo array com inversão de lado do primeiro e terceiro elemento', () => {
-    expect(swap([1,2,3])).toEqual([3,2,1]);
+  it("retorna um novo array com inversão de lado do primeiro e terceiro elemento", () => {
+    expect(swap([1, 2, 3])).toEqual([3, 2, 1]);
   });
 
-  it('retorna um objeto representando o carro', () => {
+  it("retorna um objeto representando o carro", () => {
     const palio = ["Palio", "Fiat", 2019];
     const shelbyCobra = ["Shelby Cobra", "Ford", 1963];
     const chiron = ["Chiron", "Bugatti", 2016];
-    expect(toObject(palio)).toEqual({ modelo: 'Palio', marca: 'Fiat', ano: 2019 });
-    expect(toObject(shelbyCobra)).toEqual({ modelo: 'Shelby Cobra', marca: 'Ford', ano: 1963 });
-    expect(toObject(chiron)).toEqual({ modelo: 'Chiron', marca: 'Bugatti', ano: 2016 });
+    expect(toObject(palio)).toEqual({
+      modelo: "Palio",
+      marca: "Fiat",
+      ano: 2019,
+    });
+    expect(toObject(shelbyCobra)).toEqual({
+      modelo: "Shelby Cobra",
+      marca: "Ford",
+      ano: 1963,
+    });
+    expect(toObject(chiron)).toEqual({
+      modelo: "Chiron",
+      marca: "Bugatti",
+      ano: 2016,
+    });
   });
 
   it("retorna o comprimento do navio com sua unidade de comprimento", () => {
@@ -110,5 +123,11 @@ describe("trabalhando do spreed, rest, parametre defalut", () => {
     expect(shipLength(ships[0])).toBe("Titanic is 269.1 meters long");
     expect(shipLength(ships[1])).toBe("Queen Mary 2 is 1132 feet long");
     expect(shipLength(ships[2])).toBe("Yamato is 256 meters long");
+  });
+
+  it("", () => {
+    expect(greet('John')).toBe("Hi John");
+    expect(greet('John', 'Good morning')).toBe("Good morning John");
+    expect(greet('Isabela', "Oi")).toBe("Oi Isabela");
   });
 });
