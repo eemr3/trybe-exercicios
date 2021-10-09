@@ -3,6 +3,7 @@ const sum = require("../src/exercise2");
 const personLikes = require("../src/exercise3");
 const filterPeople = require("../src/exercise4");
 const swap = require('../src/exercise5');
+const toObject = require("../src/exercise6");
 
 describe("trabalhando do spreed, rest, parametre defalut", () => {
   it("retorne a área dos 3 retângulos", () => {
@@ -76,5 +77,14 @@ describe("trabalhando do spreed, rest, parametre defalut", () => {
 
   it('retorna um novo array com inversão de lado do primeiro e terceiro elemento', () => {
     expect(swap([1,2,3])).toEqual([3,2,1]);
+  });
+
+  it('', () => {
+    const palio = ["Palio", "Fiat", 2019];
+    const shelbyCobra = ["Shelby Cobra", "Ford", 1963];
+    const chiron = ["Chiron", "Bugatti", 2016];
+    expect(toObject(palio)).toEqual({ modelo: 'Palio', marca: 'Fiat', ano: 2019 });
+    expect(toObject(shelbyCobra)).toEqual({ modelo: 'Shelby Cobra', marca: 'Ford', ano: 1963 });
+    expect(toObject(chiron)).toEqual({ modelo: 'Chiron', marca: 'Bugatti', ano: 2016 });
   });
 });
