@@ -2,6 +2,7 @@ const rectangleArea = require("../src/exercise1");
 const sum = require("../src/exercise2");
 const personLikes = require("../src/exercise3");
 const filterPeople = require("../src/exercise4");
+const swap = require('../src/exercise5');
 
 describe("trabalhando do spreed, rest, parametre defalut", () => {
   it("retorne a área dos 3 retângulos", () => {
@@ -71,5 +72,9 @@ describe("trabalhando do spreed, rest, parametre defalut", () => {
       { name: "Nicole", bornIn: 1992, nationality: "Australian" },
       { name: "Toby", bornIn: 1901, nationality: "Australian" },
     ]);
+  });
+
+  it('retorna um novo array com inversão de lado do primeiro e terceiro elemento', () => {
+    expect(swap([1,2,3])).toEqual([3,2,1]);
   });
 });
