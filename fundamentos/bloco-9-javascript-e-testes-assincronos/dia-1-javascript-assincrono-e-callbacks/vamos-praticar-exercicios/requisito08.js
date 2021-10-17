@@ -32,8 +32,7 @@ function getPokemonDetails(filter, callback) {
 
     const { name, type, ability } = pokemon;
 
-    const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é 
-        ${type} e a habilidade principal dele é ${ability}`;
+    const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
 
     callback(null, messageFromProfOak);
   }, 2000);
@@ -44,11 +43,8 @@ const isPokemon = (pokemon) => pokemon.name === namePokemon;
 const printInfoPokemonScreen = (onError, onSuccess) => onSuccess ? console.log(onSuccess) : console.log(onError)
 
 
-  getPokemonDetails(isPokemon, printInfoPokemonScreen);
-  
-
-
-
+  // getPokemonDetails(isPokemon, printInfoPokemonScreen);
+ 
 module.exports = {
   getPokemonDetails,
 };
