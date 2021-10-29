@@ -1,14 +1,22 @@
 .card-pokemon {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgb(85, 85, 85);
-  border-left: 1px solid rgb(85, 85, 85);
   border-radius: 5px;
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
   padding: 17px;
   margin: 10px;
   width: 400px;
   transition: all 0.3s ease-out;
+}
+
+.card-pokemon:nth-child(even) {
+  border-top: 1px solid rgb(40, 11, 207);
+  border-left: 1px solid rgb(40, 11, 207);
+}
+
+.card-pokemon:nth-child(odd) {
+  border-top: 1px solid rgb(172, 32, 32);
+  border-left: 1px solid rgb(172, 32, 32);
 }
 
 .card-pokemon:hover {
