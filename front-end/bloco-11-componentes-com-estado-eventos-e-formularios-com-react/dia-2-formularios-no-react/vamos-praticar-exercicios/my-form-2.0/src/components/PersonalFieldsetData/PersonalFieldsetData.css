@@ -1,0 +1,10 @@
+.container-fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px 0;
+}
+
+.container-fieldset input {
+  margin: 10px 0;
+}
