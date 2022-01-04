@@ -82,37 +82,37 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 10: Introdução - React
 
-- [ ] 10-1: _'Hello, world!' no React!_
-- [ ] 10-2: _Componentes React_
-- [ ] 10-3: _[Projeto - Sistema Solar]()_
+- [x] 10-1: _'Hello, world!' no React!_
+- [x] 10-2: _Componentes React_
+- [x] 10-3: _[Projeto - Sistema Solar]()_
 
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
-- [ ] 11-1: _Components com estado e eventos_
-- [ ] 11-2: _Formulários no React_
-- [ ] 11-3: _[Projeto - Tryunfo]()_
+- [x] 11-1: _Components com estado e eventos_
+- [x] 11-2: _Formulários no React_
+- [x] 11-3: _[Projeto - Tryunfo]()_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
-- [ ] 12-1: _Ciclo de vida de componentes_
-- [ ] 12-2: _React Router_
-- [ ] 12-3: _[Projeto - Trybe Tunes]()_
+- [x] 12-1: _Ciclo de vida de componentes_
+- [x] 12-2: _React Router_
+- [x] 12-3: _[Projeto - Trybe Tunes]()_
 
 ##### Bloco 13: Metodologias Ágeis
 
-- [ ] 13-1: _Metodologias Ágeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [x]  13-1: _Metodologias Ágeis_
+- [x] 13-2: _[Projeto - Frontend Online Store]()_
 
 ##### Bloco 14: Testes automatizados com React Testing Library
 
-- [ ] 14-1: _RTL - Primeiros passos_
-- [ ] 14-2: _RTL - Mocks e Inputs_
-- [ ] 14-3: _RTL - Testando Reac Router_
-- [ ] 14-4: _[Projeto - Testes em React]()_
+- [x] 14-1: _RTL - Primeiros passos_
+- [x] 14-2: _RTL - Mocks e Inputs_
+- [x] 14-3: _RTL - Testando Reac Router_
+- [x] 14-4: _[Projeto - Testes em React]()_
 
 ##### Bloco 15: Gerenciamento de estado com Redux
 
-- [ ] 15-1: _Introdução ao Redux - O estado global da aplicação_
+- [x] 15-1: _Introdução ao Redux - O estado global da aplicação_
 - [ ] 15-2: _Usando o Redux no React_
 - [ ] 15-3: _Usando o Redux no React - Prática_
 - [ ] 15-4: _Usando o Redux no React - Actions Assinconas_
