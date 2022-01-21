@@ -113,15 +113,15 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 15: Gerenciamento de estado com Redux
 
 - [x] 15-1: _Introdução ao Redux - O estado global da aplicação_
-- [ ] 15-2: _Usando o Redux no React_
-- [ ] 15-3: _Usando o Redux no React - Prática_
-- [ ] 15-4: _Usando o Redux no React - Actions Assinconas_
-- [ ] 15-5: _Testes em React-Redux_
-- [ ] 15-6: _[Projeto - Trybe Wallet]()_
+- [x] 15-2: _Usando o Redux no React_
+- [x] 15-3: _Usando o Redux no React - Prática_
+- [x] 15-4: _Usando o Redux no React - Actions Assinconas_
+- [x] 15-5: _Testes em React-Redux_
+- [x] 15-6: _[Projeto - Trybe Wallet]()_
 
 ##### Bloco 16: Projeto Jogo de Trivia
 
-- [ ] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia]()_
 
 ##### Bloco 17: Context API e React Hooks
 
