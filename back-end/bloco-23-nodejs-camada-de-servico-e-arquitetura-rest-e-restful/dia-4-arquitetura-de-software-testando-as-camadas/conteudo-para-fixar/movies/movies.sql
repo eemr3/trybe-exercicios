@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS movies;
+USE movies;
+CREATE TABLE films (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `title` VARCHAR(80) NOT NULL,
+  `directed_by` VARCHAR(80) NOT NULL,
+  `release_year` YEAR DEFAULT NULL
+);
