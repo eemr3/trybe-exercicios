@@ -7,11 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Emerson Moreira",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^17.0.23",
-    "git-commit-msg-linter": "^4.1.1",
     "typescript": "^4.6.3"
   }
 }
