@@ -9,3 +9,5 @@ const port = 3001;
 app.use('/', UsersRoutes);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+module.exports = app;
