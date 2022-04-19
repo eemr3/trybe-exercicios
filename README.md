@@ -137,6 +137,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: Docker: Utilizando Containers
+
 - [x] 19-1: _Introdução - Back-end_
 - [x] 19-1: _Utilizando Containers - Docker_
 - [x] 19-2: _Manipulação e Criação de Imagens Docker_
@@ -180,12 +181,12 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 24: Node.js: ORM e Autenticação
 
-- [ ] 24-1: _Introdução - Node.js: ORM e Autenticação_
-- [ ] 24-1: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 24-2: _ORM - Associations_
-- [ ] 24-3: _JWT - (JSON Web Token)_
-- [ ] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _[Projeto - API de Blogs]()_
+- [x] 24-1: _Introdução - Node.js: ORM e Autenticação_
+- [x] 24-1: _ORM - Interface da aplicação com o banco de dados_
+- [x] 24-2: _ORM - Associations_
+- [x] 24-3: _JWT - (JSON Web Token)_
+- [x] 24-4: _Testando APIs com Testes de Integração_
+- [x] 24-5: _[Projeto - API de Blogs](https://github.com/eemr3/projetct-blog-api)_
 
 ##### Bloco 25: Deployment
 
@@ -225,14 +226,20 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 29-5: _Updates Complexos - Arrays_
 - [ ] 29-6: _[Projeto - Commerce]()_
 
-##### Bloco 31: MasterClass - VPS, CI/CD
+##### Bloco 30: MongoDB com Node.js e POO
 
-- [ ] 31-1: _Dia 1_
-- [ ] 31-2: _Dia 2_
+- [ ] 30-1: _MongoDB e arquitetura MSC_
+- [ ] 30-2: _MongoDB e POO_
+- [ ] 30-3: _[Projeto - Car Shop]()_
 
-##### Bloco 32: Projeto - App de Delivery
+##### Bloco 31: Projeto - App de Delivery
 
-- [ ] 32-1: _[Projeto - App de Delivery]()_
+- [ ] 31-1: _[Projeto - App de Delivery]()_
+
+##### Bloco 32: MasterClass - VPS, CI/CD
+
+- [ ] 32-1: _Dia 1_
+- [ ] 32-2: _Dia 2_
 
 ## Ciência da Computação ⏳
 
@@ -252,18 +259,21 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 34-4: _[Projeto - Relatórios de Estoque]()_
 
 ##### Bloco 35: Redes e Raspagem de Dados
+
 - [ ] 35-1: _Arquitetura de redes_
 - [ ] 35-2: _Redes de computadores, ferramentas e segurança_
 - [ ] 35-3: _Raspagem de Dados_
 - [ ] 35-4: _[Projeto - Tech news]()_
 
 ##### Bloco 36: Algoritmos
+
 - [ ] 36-1: _Complexidade de Algoritmos_
 - [ ] 36-2: _Recursividade e Estratégias para solução de problemas_
 - [ ] 36-3: _Algoritmos de ordenação e busca_
 - [ ] 36-4: _[Projeto - Algoritmos]()_
 
 ##### Bloco 37: Estrutura de Dados I: Arrays, Hashmaps e Sets
+
 - [ ] 37-1: _Arquitetura de Computadores_
 - [ ] 37-2: _Arrays_
 - [ ] 37-3: _Hashmap e Dict_
@@ -271,6 +281,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 37-5: _[Projeto - Restaurant Orders]()_
 
 ##### Bloco 38: Estrutura de Dados II: Listas, Filas e Pilhas
+
 - [ ] 38-1: _Nó e Listas Encadeadas_
 - [ ] 38-2: _Pilhas e Filas_
 - [ ] 38-3: _[Projeto - TING - Trybe Is Not Google]()_
