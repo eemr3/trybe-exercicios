@@ -8,8 +8,8 @@ export default class ValidationUser {
 
   private validateEmail = (email: string) => {
     if (!email) return 'O email é obrigatório';
-    if (!email.includes('@') || !email.includes('.com'))
-      return 'E-mail no formato incorreto';
+    // if (!email.includes('@') || !email.includes('.com'))
+    //   return 'E-mail no formato incorreto';
   };
 
   private validatePassword = (password: string) => {
@@ -24,9 +24,9 @@ export default class ValidationUser {
     next: NextFunction,
   ): Response | void => {
     const { name, password, email } = req.body;
-    const errorsName = this.validateName;
-    const errorsPwd = this.validatePassword;
-    const errorsEmail = this.validateEmail;
+    const errorsName = this.validateName(name);
+    const errorsPwd = this.validatePassword(password);
+    const errorsEmail = this.validateEmail(email);
 
     if (errorsName) return res.status(400).json({ message: errorsName });
     if (errorsPwd) return res.status(400).json({ message: errorsPwd });
