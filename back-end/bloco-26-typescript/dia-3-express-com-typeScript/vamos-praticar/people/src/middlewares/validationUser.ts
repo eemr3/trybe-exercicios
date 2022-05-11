@@ -8,8 +8,8 @@ export default class ValidationUser {
 
   private validateEmail = (email: string) => {
     if (!email) return 'O email é obrigatório';
-    // if (!email.includes('@') || !email.includes('.com'))
-    //   return 'E-mail no formato incorreto';
+    if (!email.includes('@') || !email.includes('.com'))
+      return 'E-mail no formato incorreto';
   };
 
   private validatePassword = (password: string) => {
