@@ -1,0 +1,11 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'first_mongo_db';
+const collection = 'bios';
+
+// Create a new database.
+use(database);
+// db.bios.find({}, {name: true});
+// db.bios.find({}).limit(5);
+// db.bios.find({}).limit(5).skip(5);
