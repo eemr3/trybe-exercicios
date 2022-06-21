@@ -1,0 +1,13 @@
+const database = 'business';
+
+// Create a new database.
+use(database);
+
+// db.restaurants.find({ rating: { $exists: true } })
+
+// db.restaurants.countDocuments({ 
+//   $and: [{rating: {$not:{$eq: 1}}}, {cuisine: {$not:{$eq: 'American'}}}] 
+// })
+
+db.restaurants.countDocuments({ 
+  $nor: [{rating: {$eq: 1}}, {cuisine: {$eq: 'American'}}]})

@@ -1,0 +1,7 @@
+const database = 'business';
+
+// Create a new database.
+use(database);
+
+db.restaurants.find({}).sort({name: 1})
+// db.restaurants.find({}, {name: true}).sort({name: 1})

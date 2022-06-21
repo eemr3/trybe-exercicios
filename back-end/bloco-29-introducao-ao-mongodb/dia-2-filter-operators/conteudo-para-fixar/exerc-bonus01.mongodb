@@ -1,0 +1,7 @@
+const database = 'aula-filter-operators';
+
+
+// Create a new database.
+use(database);
+
+db.dropDatabase()
