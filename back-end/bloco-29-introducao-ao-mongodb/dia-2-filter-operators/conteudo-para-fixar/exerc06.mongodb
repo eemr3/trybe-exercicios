@@ -1,0 +1,8 @@
+const database = 'business';
+
+// Create a new database.
+use(database);
+
+// db.restaurants.find({ rating: { $exists: true } })
+
+db.restaurants.find({ rating: { $exists: true, $nin: [ 5, 7 ] } })

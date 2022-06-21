@@ -1,0 +1,6 @@
+const database = 'business';
+
+// Create a new database.
+use(database);
+
+db.restaurants.countDocuments({rating: {$lt: 4}});
