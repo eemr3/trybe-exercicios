@@ -6,5 +6,4 @@ const collection = 'books';
 
 // Create a new database.
 use(database);
-
-db.books.countDocuments({});
+db.books.find({status: "MEAP"}, {title: true, authors: true, status: true}).limit(10).skip(5);

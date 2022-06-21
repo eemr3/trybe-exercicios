@@ -6,5 +6,4 @@ const collection = 'books';
 
 // Create a new database.
 use(database);
-
-db.books.countDocuments({});
+db.books.find({}, {title: true, isbn: true, pageCount: true, _id: false}).limit(3);

@@ -6,5 +6,5 @@ const collection = 'books';
 
 // Create a new database.
 use(database);
-
-db.books.countDocuments({});
+// db.books.find({});
+db.books.countDocuments({status: "PUBLISH"});
