@@ -1,0 +1,14 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'conteudo_trybe';
+
+use(database);
+
+db.inventory.find({})
+
+//Update em um documento da coleção
+db.inventory.updateOne(
+  { item: "paper" },
+  { $set: { "size.uom": "cm", status: "P" } }
+);

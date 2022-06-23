@@ -1,0 +1,21 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'conteudo_trybe';
+
+use(database);
+
+// db.products.insertOne(
+//   { _id: 2, item: "Unknown" }
+// );
+
+db.products.find()
+
+/*
+A query abaixo faz um update no documento, aplicando o operador $mul no campo price, que não existe neste documento:
+*/
+
+// db.products.update(
+//   { _id: 2 },
+//   { $mul: { price: NumberLong("100") } }
+// );

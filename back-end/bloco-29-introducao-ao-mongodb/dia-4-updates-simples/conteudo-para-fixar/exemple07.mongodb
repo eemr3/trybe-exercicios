@@ -1,0 +1,21 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'conteudo_trybe';
+
+use(database);
+
+// db.products.insertOne(
+//   { _id: 3,  item: "XYZ", price: NumberLong("10") }
+// );
+
+db.products.find()
+
+/*
+A query abaixo faz um update, multiplicando o valor do campo price, que é do tipo NumberLong("10"), por NumberInt(5):
+*/
+
+// db.products.update(
+//   { _id: 3 },
+//   { $mul: { price: NumberInt(5) } }
+// );
