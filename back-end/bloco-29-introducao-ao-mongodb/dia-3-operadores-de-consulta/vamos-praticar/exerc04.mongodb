@@ -1,0 +1,14 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'cinema';
+
+use(database);
+
+db.movies.find({
+  ratings: {$elemMatch: {$gte: 100, $lte: 105}}},
+{
+  title: true,
+  ratings: true,
+  _id: false
+})
