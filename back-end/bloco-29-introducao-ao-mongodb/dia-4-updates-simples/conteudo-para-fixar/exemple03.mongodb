@@ -1,0 +1,49 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'conteudo_trybe';
+
+use(database);
+
+db.products.find()
+
+//Exemplo 1: Alterando campos no primeiro nível (top-level)
+/*
+Para o documento que corresponder ao critério de filtro 
+em que o campo _id seja igual a 100, a operação a seguir 
+altera o valor dos campos quantity, details e tags:
+*/
+
+// db.products.update(
+//   { _id: 100 },
+//   { $set: {
+//       quantity: 500,
+//       details: { model: "14Q3", make: "xyz" },
+//       tags: [ "coats", "outerwear", "clothing" ]
+//     }
+//   }
+// );
+
+// Exemplo 2: Alterando campos em documentos embedados
+/*
+Para alterar campos dentro de subdocumentos, você deve utilizar o mesmo conceito de dot notation visto durante as operações de find().
+A operação abaixo altera o valor do campo make dentro do subdocumento details em que o campo _id seja igual a 100:
+ */
+
+//  db.products.update(
+//   { _id: 100 },
+//   { $set: { "details.make": "zzz" } }
+// );
+
+// Exemplo 3: Alterando valores em arrays
+/*
+Como visto, arrays são uma estrutura muito importante na modelagem de dados do MongoDB, e em algum momento você precisará fazer updates nessas estruturas.
+*/
+// db.products.update(
+//   { _id: 100 },
+//   { $set: {
+//       "tags.1": "rain gear",
+//       "ratings.0.rating": 2
+//     }
+//   }
+// );

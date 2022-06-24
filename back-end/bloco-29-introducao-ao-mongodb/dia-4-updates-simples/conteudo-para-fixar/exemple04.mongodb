@@ -1,0 +1,17 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'conteudo_trybe';
+
+use(database);
+
+db.products.find()
+
+/**
+A query abaixo altera esse documento, utilizando o operador $mul para multiplicar os valores dos campos price e qty:
+ */
+
+// db.products.update(
+//   { _id: 1 },
+//   { $mul: { price: NumberDecimal("1.25"), qty: 2 } }
+// );
