@@ -1,0 +1,27 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'cinema';
+
+// Create a new database.
+use(database);
+
+db.movies.updateOne({title: "Home Alone"},{
+  $push:{
+    cast: {
+      $each:[
+        {
+          "actor": "Macaulay Culkin",
+          "character": "Kevin"
+        },
+        {
+          "actor": "Joe Pesci",
+          "character": "Harry"
+        },
+        {
+          "actor": "Daniel Stern"
+        }
+      ]
+    }
+  }
+})

@@ -1,0 +1,17 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'cinema';
+
+// Create a new database.
+use(database);
+db.movies.updateOne(
+  {title: "Batman", "cast.character": "Batman"}, 
+{
+  $push: {
+    "cast.$.actor": {
+      $each: ["Christian Bale","Michael Keaton", "Val Kilmer", "George Clooney"],
+      $sort:  1
+    }
+  },
+})
