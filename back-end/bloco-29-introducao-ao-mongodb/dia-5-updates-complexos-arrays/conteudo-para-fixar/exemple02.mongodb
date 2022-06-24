@@ -1,0 +1,30 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'sales';
+
+
+// Create a new database.
+use(database);
+
+db.supplies.updateOne(
+  {},
+  {
+$push: {
+      items: {
+        $each: [
+            {
+              "name": "pens",
+              "price": 56.12,
+              "quantity": 5,
+            },
+            {
+              "name": "envelopes",
+              "price": 19.95,
+              "quantity": 8,
+            },
+          ],
+        },
+    },
+  },
+);
